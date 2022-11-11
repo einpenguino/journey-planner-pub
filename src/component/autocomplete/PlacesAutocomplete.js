@@ -189,7 +189,7 @@ export default function PlacesAutocomplete ({ setSelected , selectTravelMode, di
           <CancelIcon/>
         </IconButton>
       </Grid2>
-      <Grid2 xs={2.5}>
+      <Grid2 xs={1.5}>
         <Box>
           <Typography vatiant='overline'>
             {distance}
