@@ -201,14 +201,14 @@ export default function PlacesAutocomplete ({ setSelected , selectTravelMode, di
 
       </Grid2>
       <Grid2 xs={0.5} display='flex' justifyContent='right'>
-        <Link to='/datatable'>
+        {/* <Link to='/datatable'>
           <IconButton
           aria-label='To data table!'
           color='secondary'
           >
             <TableRowsIcon />
           </IconButton>
-        </Link>
+        </Link> */}
         <Link to='/about'>
           <IconButton
           aria-label='To-About-Page'

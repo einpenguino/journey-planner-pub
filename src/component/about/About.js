@@ -30,14 +30,14 @@ export default function AboutPage () {
                         <MapIcon />
                     </Link>
                 </IconButton>
-                <IconButton
+                {/* <IconButton
                 aria-label='to data table!'
                 color='success'
                 >
                     <Link to='/datatable'>
                         <TableRowsIcon />
                     </Link>
-                </IconButton>
+                </IconButton> */}
                 </Grid2>
             </Grid2>
             <Box 
