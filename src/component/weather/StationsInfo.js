@@ -4,8 +4,6 @@ export default function StationsData({childUpdateAPI}) {
     const [responseStatus, setResponseStatus] = useState(null)
     const [responseBody, setResponseBody] = useState(null)
     const [stationInfo, setStationInfo] = useState(null)
-    // const query = 'https://excuser.herokuapp.com/v1/excuse'
-    // const myHeaders = new Headers()
 
     const callStationsAPI = async () => {
         const date = new Date()
@@ -17,7 +15,6 @@ export default function StationsData({childUpdateAPI}) {
             minute : String(date.getMinutes()).padStart(2, '0'),
             second : String(date.getSeconds()).padStart(2, '0')
         }
-        // const query = `https://api.data.gov.sg/v1/environment/rainfall?date_time=2022-11-03T08%3A00%3A00`
         const query = `https://api.data.gov.sg/v1/environment/rainfall?date_time=${dateFields.year}-${dateFields.month}-${dateFields.day}T${dateFields.hour}%3A${dateFields.minute}%3A${dateFields.second}`
         const response = await fetch(query)
         const json = await response.json()
@@ -73,12 +70,8 @@ export default function StationsData({childUpdateAPI}) {
             else entry = null
         } 
     }
-    // const appendValues = (input) => {
-    //     for (obj in input) {
-            
-    //     }
-    // }
 
+    /* Calls Weather API by default every 60 seconds, API refreshes every 60 secodns*/
     useEffect(() => {
         // const date = new Date()
         callStationsAPI()
@@ -98,12 +91,4 @@ export default function StationsData({childUpdateAPI}) {
         // console.log(stationInfo)
         childUpdateAPI(stationInfo)
     }, [stationInfo])
-
-    // return (
-    //     <div>
-    //         {/* <h1 onClick={() => {callStationsAPI()}} >Hi</h1> */}
-    //         {/* <button onClick={() => {callStationsAPI()}} /> */}
-    //         {/* <h6>{stationInfo.stations}</h6> */}
-    //     </div>
-    // )
 }

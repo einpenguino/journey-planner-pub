@@ -1,0 +1,2 @@
+// nomenclature = http://www.weather.gov.sg/files/rainarea/50km/v2/dpsri_70km_2022111115500000dBR.dpsri.png'
+// nomen 240km ='http://www.weather.gov.sg/files/rainarea/240km/dpsri_240km_2022111115450000dBR.dpsri.png'
